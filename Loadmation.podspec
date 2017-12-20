@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'Loadmation'
-s.version          = '0.0.1'
+s.version          = '0.0.2'
 s.summary          = 'A very simple loading indicator for Swift.'
 
 s.description      = <<-DESC
@@ -11,7 +11,7 @@ DESC
 s.homepage         = 'https://github.com/saqibomer/Loadmation'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'Saqib Omer' => 'saqibomer.cs@gmail.com' }
-s.source           = { :git => 'https://github.com/saqibomer/Loadmation.git', :tag => s.version.to_s }
+s.source           = { :git => "https://github.com/saqibomer/Loadmation.git", :branch => "master", :tag => s.version.to_s }
 
 s.ios.deployment_target = '10.0'
 s.source_files = 'Loadmation/Loadmation.swift'
