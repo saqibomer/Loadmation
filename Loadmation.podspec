@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/saqibomer/Loadmation"
-  s.screenshots  = "https://github.com/saqibomer/Loadmation/blob/master/demo.gif"
+  s.screenshots  = "https://github.com/saqibomer/Loadmation/blob/master/sc.png"
 
 
  
