@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.author             = { "Saqib" => "saqibomer.cs@gmail.com" }
 
-  s.social_media_url   = "https://www.linkedin.com/in/saqibomer"
+ 
 
   s.platform     = :ios, "10.0"
 
