@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // Properties
+    @IBOutlet weak var loadingView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+         Loadmation(parent: self.loadingView, style: Loadmation.Styles.Circular.rawValue, frame: self.loadingView.frame)
     }
 
     override func didReceiveMemoryWarning() {

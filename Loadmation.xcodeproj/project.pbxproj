@@ -13,6 +13,7 @@
 		AA50E7DE1FE60F4E00A3A6E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA50E7DD1FE60F4E00A3A6E1 /* Assets.xcassets */; };
 		AA50E7E11FE60F4E00A3A6E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA50E7DF1FE60F4E00A3A6E1 /* LaunchScreen.storyboard */; };
 		AA50E7E91FE60F5D00A3A6E1 /* Loadmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50E7E81FE60F5D00A3A6E1 /* Loadmation.swift */; };
+		AA57094A1FEBCEA900ADEB97 /* circular.png in Resources */ = {isa = PBXBuildFile; fileRef = AA5709491FEBCEA900ADEB97 /* circular.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AA50E7E01FE60F4E00A3A6E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA50E7E21FE60F4E00A3A6E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA50E7E81FE60F5D00A3A6E1 /* Loadmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadmation.swift; sourceTree = "<group>"; };
+		AA5709491FEBCEA900ADEB97 /* circular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circular.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		AA50E7CA1FE60F4E00A3A6E1 = {
 			isa = PBXGroup;
 			children = (
+				AA5709481FEBCC9700ADEB97 /* Src */,
 				AA50E7D51FE60F4E00A3A6E1 /* Loadmation */,
 				AA50E7D41FE60F4E00A3A6E1 /* Products */,
 			);
@@ -62,9 +65,17 @@
 				AA50E7DD1FE60F4E00A3A6E1 /* Assets.xcassets */,
 				AA50E7DF1FE60F4E00A3A6E1 /* LaunchScreen.storyboard */,
 				AA50E7E21FE60F4E00A3A6E1 /* Info.plist */,
-				AA50E7E81FE60F5D00A3A6E1 /* Loadmation.swift */,
 			);
 			path = Loadmation;
+			sourceTree = "<group>";
+		};
+		AA5709481FEBCC9700ADEB97 /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				AA5709491FEBCEA900ADEB97 /* circular.png */,
+				AA50E7E81FE60F5D00A3A6E1 /* Loadmation.swift */,
+			);
+			path = Src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +139,7 @@
 			files = (
 				AA50E7E11FE60F4E00A3A6E1 /* LaunchScreen.storyboard in Resources */,
 				AA50E7DE1FE60F4E00A3A6E1 /* Assets.xcassets in Resources */,
+				AA57094A1FEBCEA900ADEB97 /* circular.png in Resources */,
 				AA50E7DC1FE60F4E00A3A6E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7LPSTH4CZ2;
 				INFOPLIST_FILE = Loadmation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaboomlab.Loadmation;
@@ -293,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7LPSTH4CZ2;
 				INFOPLIST_FILE = Loadmation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaboomlab.Loadmation;
