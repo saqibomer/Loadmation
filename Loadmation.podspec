@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
  s.resource_bundles = {
     'Loadmation' => [
-        'Src/**/*.xcassets'
+        'Src/**/*.png'
     ]
  }
  
