@@ -46,8 +46,8 @@ public class Loadmation {
      *
      */
     public enum Styles: String {
-        case Circular = "circular.png"
-        case Triangle = "triangle.png"
+        case Circular = "circular"
+        case Triangle = "triangle"
     }
     
     private var loadingState        : Bool!    // Loading State of view
@@ -68,7 +68,7 @@ public class Loadmation {
     
     func startCircularAnimation() {
         
-        let imageName = Styles.Circular.rawValue.appending(".png")
+        let imageName = Styles.Circular.rawValue
         let image = UIImage(named: imageName)
         
         let loadmationImgView = LoadmationImageView(frame: (self.loadingContainer?.frame)!, image: image!)

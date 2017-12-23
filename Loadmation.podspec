@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Loadmation"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Simple Loading Animation"
 
   s.description  = <<-DESC
@@ -27,7 +27,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/saqibomer/Loadmation.git", :tag => s.version }
 
 
-  s.source_files  = "Src/**/*.{h,m,swift,png}"
+  s.source_files  = "Src/**/*.{png, xcassets, swift}"
+ 
   
 
  
