@@ -27,7 +27,13 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/saqibomer/Loadmation.git", :tag => s.version }
 
 
-  s.source_files  = "Src/**/*.{png, xcassets, swift}"
+  s.source_files  = "Src/**/*.{swift}"
+
+ s.resource_bundles = {
+    'Loadmation' => [
+        'Src/**/*.xcassets'
+    ]
+ }
  
   
 
