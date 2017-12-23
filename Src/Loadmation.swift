@@ -68,8 +68,13 @@ public class Loadmation {
     
     func startCircularAnimation() {
         
-        let imageName = Styles.Circular.rawValue
-        let image = UIImage(named: imageName)
+        let imageName = Styles.Circular.rawValue.appending(".png")
+        
+        
+        let frameworkBundle = Bundle(for: Loadmation.self)
+        let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("Loadmation.bundle")
+        let resourceBundle = Bundle(url: bundleURL!)
+        let image = UIImage(named: imageName, in: resourceBundle, compatibleWith: nil)
         
         let loadmationImgView = LoadmationImageView(frame: (self.loadingContainer?.frame)!, image: image!)
         self.loadingContainer?.layoutIfNeeded()

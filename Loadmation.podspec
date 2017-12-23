@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Loadmation"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "Simple Loading Animation"
 
   s.description  = <<-DESC
