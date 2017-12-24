@@ -35,7 +35,7 @@ Loadmation(parent: self.loadingContainer, style: Loadmation.Styles.Circular.rawV
 ## Supported loading animation styles
 
 * Circular
-    * ```sh Loadmation.Styles.Circular.rawValue```
+    * ```Loadmation.Styles.Circular.rawValue```
 
 ## Meta
 
