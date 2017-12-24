@@ -11,11 +11,14 @@ A custom loading animation for Swift.
 
 iOS  - Swift:
 
+Add Loadmation to your pod file.
 ```sh
 pod 'Loadmation'
 ```
-
-
+Install Loadmation
+```sh
+pod install
+```
 
 ## Usage example
 
