@@ -4,7 +4,7 @@
 [![Badge w/ Version](https://cocoapod-badges.herokuapp.com/v/NSStringMask/badge.png)](https://cocoadocs.org/docsets/NSStringMask)
 [![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/NSStringMask/badge.svg)](https://cocoadocs.org/docsets/NSStringMask)
 
-One to two paragraph statement about your product and what it does.
+A custom loading animation for Swift.
 
 ![https://raw.githubusercontent.com/saqibomer/Loadmation/master/demo.gif](demo.gif)
 
@@ -36,10 +36,7 @@ Loadmation(parent: self.loadingContainer, style: Loadmation.Styles.Circular.rawV
 ## Supported loading animation styles
 
 * Circular
-    * ```sh
-		Loadmation.Styles.Circular.rawValue
-	```
-
+    * ```sh Loadmation.Styles.Circular.rawValue```
 
 ## Meta
 
