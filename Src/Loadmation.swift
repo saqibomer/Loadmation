@@ -55,14 +55,14 @@ public class Loadmation {
     private var loadingContainer    : UIView?  // Parent View
     private var containerFrame      : CGRect?  // Frame
     fileprivate var loadingImgView  : UIImageView! // Serves as loading image view
-    
+    var loadmationImgView : LoadmationImageView?
     @discardableResult public init(parent: UIView, style: String, frame: CGRect) {
         
         self.loadingStyle       = style
         self.loadingState       = false
         self.loadingContainer   = parent
         self.containerFrame     = frame
-        self.startAnimation()
+//        self.startAnimation()
     }
     
     
@@ -76,19 +76,23 @@ public class Loadmation {
         let resourceBundle = Bundle(url: bundleURL!)
         let image = UIImage(named: imageName, in: resourceBundle, compatibleWith: nil)
         
-        let loadmationImgView = LoadmationImageView(frame: (self.loadingContainer?.frame)!, image: image!)
+        loadmationImgView = LoadmationImageView(frame: (self.loadingContainer?.frame)!, image: image!)
         self.loadingContainer?.layoutIfNeeded()
-        loadmationImgView.contentMode = .scaleAspectFit
-        self.loadingContainer?.addSubview(loadmationImgView)
-        self.loadingContainer?.bounds = self.containerFrame!
+        loadmationImgView?.contentMode             = .scaleAspectFit
+        self.loadingContainer?.addSubview(loadmationImgView!)
+        self.loadingContainer?.bounds              = self.containerFrame!
+        self.loadingContainer?.layer.cornerRadius  = (self.loadingContainer?.layer.frame.width)! / 2
+        self.loadingContainer?.clipsToBounds       = true
         self.rotateAnimation(view: self.loadingContainer!)
+        self.loadingState = true
         
     }
     
     
     // MARK: - Start Animation
     
-    func startAnimation() {
+    public func startAnimation() {
+        self.loadingContainer?.isHidden = false
         if !self.loadingState {
             let loadStyle = Styles.Circular.rawValue
             
@@ -98,6 +102,7 @@ public class Loadmation {
             default:
                 print("No Style Selected")
             }
+            
         }
     }
     
@@ -112,14 +117,16 @@ public class Loadmation {
         rotateAnimation.repeatCount = Float.greatestFiniteMagnitude;
         
         view.layer.add(rotateAnimation, forKey: nil)
-        view.isHidden = false
+        
     }
     
     // MARK: - Stop loading animation
     
-    func stopLoadingAnimation(view : UIView)  {
-        view.layer.removeAnimation(forKey: "transform.rotation")
-        view.isHidden = true
+    func stopLoadingAnimation()  {
+        self.loadingContainer?.layer.removeAnimation(forKey: "transform.rotation")
+        self.loadmationImgView?.removeFromSuperview()
+        self.loadingContainer?.isHidden = true
+        self.loadingState = false
     }
     
 }
