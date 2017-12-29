@@ -92,6 +92,7 @@ public class Loadmation {
     // MARK: - Start Animation
     
     public func startAnimation() {
+        
         self.loadingContainer?.isHidden = false
         if !self.loadingState {
             let loadStyle = Styles.Circular.rawValue
