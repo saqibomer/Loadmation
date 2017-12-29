@@ -91,7 +91,7 @@ public class Loadmation {
     
     // MARK: - Start Animation
     
-    public func startAnimation() {
+    open func startAnimation() {
         
         self.loadingContainer?.isHidden = false
         if !self.loadingState {
@@ -123,7 +123,7 @@ public class Loadmation {
     
     // MARK: - Stop loading animation
     
-    func stopLoadingAnimation()  {
+   open func stopLoadingAnimation()  {
         self.loadingContainer?.layer.removeAnimation(forKey: "transform.rotation")
         self.loadmationImgView?.removeFromSuperview()
         self.loadingContainer?.isHidden = true

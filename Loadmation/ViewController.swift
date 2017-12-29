@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         
         self.loadmation.startAnimation()
     }
-    
+    // stop Animating
     @IBAction func stopLoadmationAction(_ sender: UIButton) {
         self.loadmation.stopLoadingAnimation()
     }
