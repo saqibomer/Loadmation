@@ -30,8 +30,27 @@ import Loadmation
 
 Initialize Loadmation
 
+Create an object of ```Loadmation```
+
+```var loadmation : Loadmation!```
+
+In your ```viewDidLoad()``` or any other method initialize object as: 
+
 ```sh
-Loadmation(parent: self.loadingContainer, style: Loadmation.Styles.Circular.rawValue, frame: self.loadingContainer.frame)
+self.loadmation = Loadmation(parent: self.loadingView, style: Loadmation.Styles.Circular.rawValue, frame: self.loadingView.frame)
+```
+> TIP: You can add container view any background color view storyboard.
+
+Start loading animation
+
+```sh
+self.loadmation.startAnimation()
+```
+
+Stop loading animation
+
+```sh
+self.loadmation.stopLoadingAnimation()
 ```
 
 
