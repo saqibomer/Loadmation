@@ -59,7 +59,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.22631147500000001" green="0.61932533980000004" blue="0.91566878559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gsy-3s-0Xw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="O6Y-km-9m8"/>
                             <constraint firstItem="gsy-3s-0Xw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="POP-Y1-EQu"/>

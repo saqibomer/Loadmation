@@ -60,6 +60,9 @@ self.loadmation.stopLoadingAnimation()
 
 * Circular
     * ```Loadmation.Styles.Circular.rawValue```
+    * ```Loadmation.Styles.Circular2.rawValue```
+    * ```Loadmation.Styles.Arrow.rawValue```
+
 
 ## Meta
 

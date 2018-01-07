@@ -85,7 +85,7 @@ public class Loadmation {
         self.loadingContainer?.bounds              = self.containerFrame!
         self.loadingContainer?.layer.cornerRadius  = (self.loadingContainer?.layer.frame.width)! / 2
         self.loadingContainer?.clipsToBounds       = true
-        self.rotateAnimation(view: self.loadingContainer!)
+        self.rotateAnimation(view: self.loadmationImgView!)
         self.loadingState = true
         
     }
@@ -172,7 +172,7 @@ public class Loadmation {
     // MARK: - Stop loading animation
     
     open func stopLoadingAnimation()  {
-        self.loadingContainer?.layer.removeAnimation(forKey: "transform.rotation")
+        self.loadmationImgView?.layer.removeAnimation(forKey: "transform.rotation")
         self.loadmationImgView?.removeFromSuperview()
         self.loadingContainer?.isHidden = true
         self.loadingState = false
