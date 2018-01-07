@@ -15,6 +15,9 @@
 		AA50E7E11FE60F4E00A3A6E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA50E7DF1FE60F4E00A3A6E1 /* LaunchScreen.storyboard */; };
 		AA50E7E91FE60F5D00A3A6E1 /* Loadmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50E7E81FE60F5D00A3A6E1 /* Loadmation.swift */; };
 		AA8E4CF41FEF1268003CA2CE /* circular.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8E4CF31FEF1268003CA2CE /* circular.png */; };
+		AAC9F3F02001718A00EE260F /* circular2.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC9F3EF2001718A00EE260F /* circular2.png */; };
+		AAC9F3F22001977000EE260F /* ExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC9F3F12001977000EE260F /* ExampleCollectionViewCell.swift */; };
+		AAC9F3F420019AFD00EE260F /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC9F3F320019AFD00EE260F /* arrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		AA50E7E21FE60F4E00A3A6E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA50E7E81FE60F5D00A3A6E1 /* Loadmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadmation.swift; sourceTree = "<group>"; };
 		AA8E4CF31FEF1268003CA2CE /* circular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circular.png; sourceTree = "<group>"; };
+		AAC9F3EF2001718A00EE260F /* circular2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circular2.png; sourceTree = "<group>"; };
+		AAC9F3F12001977000EE260F /* ExampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewCell.swift; sourceTree = "<group>"; };
+		AAC9F3F320019AFD00EE260F /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				AA50E7D61FE60F4E00A3A6E1 /* AppDelegate.swift */,
+				AAC9F3F12001977000EE260F /* ExampleCollectionViewCell.swift */,
 				AA50E7D81FE60F4E00A3A6E1 /* ViewController.swift */,
 				AA50E7DA1FE60F4E00A3A6E1 /* Main.storyboard */,
 				AA50E7DD1FE60F4E00A3A6E1 /* Assets.xcassets */,
@@ -88,7 +95,9 @@
 		AA8E4CF51FEF18E2003CA2CE /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AAC9F3EF2001718A00EE260F /* circular2.png */,
 				AA8E4CF31FEF1268003CA2CE /* circular.png */,
+				AAC9F3F320019AFD00EE260F /* arrow.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -173,6 +182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA50E7E11FE60F4E00A3A6E1 /* LaunchScreen.storyboard in Resources */,
+				AAC9F3F420019AFD00EE260F /* arrow.png in Resources */,
+				AAC9F3F02001718A00EE260F /* circular2.png in Resources */,
 				AA50E7DE1FE60F4E00A3A6E1 /* Assets.xcassets in Resources */,
 				AA8E4CF41FEF1268003CA2CE /* circular.png in Resources */,
 				AA50E7DC1FE60F4E00A3A6E1 /* Main.storyboard in Resources */,
@@ -235,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA50E7D91FE60F4E00A3A6E1 /* ViewController.swift in Sources */,
+				AAC9F3F22001977000EE260F /* ExampleCollectionViewCell.swift in Sources */,
 				AA50E7D71FE60F4E00A3A6E1 /* AppDelegate.swift in Sources */,
 				AA50E7E91FE60F5D00A3A6E1 /* Loadmation.swift in Sources */,
 			);

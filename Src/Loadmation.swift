@@ -46,8 +46,10 @@ public class Loadmation {
      *
      */
     public enum Styles: String {
-        case Circular = "circular"
-        case Triangle = "triangle"
+        case Circular  = "circular"
+        case Circular2 = "circular2"
+        case Arrow     = "arrow"
+//        case Pulse     = "pulse"
     }
     
     private var loadingState        : Bool!    // Loading State of view
@@ -62,13 +64,13 @@ public class Loadmation {
         self.loadingState       = false
         self.loadingContainer   = parent
         self.containerFrame     = frame
-//        self.startAnimation()
+        //        self.startAnimation()
     }
     
-    
+    // MARK: - Circular Animation
     func startCircularAnimation() {
         
-        let imageName = Styles.Circular.rawValue.appending(".png")
+        let imageName = self.loadingStyle!.appending(".png")
         
         
         let frameworkBundle = Bundle(for: Loadmation.self)
@@ -88,6 +90,50 @@ public class Loadmation {
         
     }
     
+    // MARK: - Pulse Animation
+    
+//    func startPulseAnimation() {
+//
+//        let baseViewPulse = CABasicAnimation(keyPath: "opacity")
+//        baseViewPulse.duration = 1.5
+//        baseViewPulse.fromValue = 0.7
+//        baseViewPulse.toValue = 0.2
+//        baseViewPulse.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+//        baseViewPulse.autoreverses = true
+//        baseViewPulse.repeatCount = Float.greatestFiniteMagnitude
+//
+//        let containerPulse = CABasicAnimation(keyPath: "opacity")
+//        containerPulse.duration = 1.0
+//        containerPulse.fromValue = 0.9
+//        containerPulse.toValue = 0.5
+//        containerPulse.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+//        containerPulse.autoreverses = true
+//        containerPulse.repeatCount = Float.greatestFiniteMagnitude
+//
+//        self.loadingContainer?.bounds              = self.containerFrame!
+//        self.loadingContainer?.layer.cornerRadius  = (self.loadingContainer?.layer.frame.width)! / 2
+//        self.loadingContainer?.clipsToBounds       = true
+//        self.loadingContainer?.layer.add(containerPulse, forKey: nil)
+//        let circle = UIView(frame: self.containerFrame!)
+//        circle.frame = CGRect(x: ((self.containerFrame?.width)! / 2) - 30 , y: circle.frame.origin.y + 30, width: 30, height: 30)
+//        circle.layer.cornerRadius  = circle.layer.frame.width / 2
+//        circle.backgroundColor = UIColor.red
+//        circle.clipsToBounds = true
+//
+//
+//
+//        let darkBlur = UIBlurEffect(style: UIBlurEffectStyle.dark)
+//        let blurView = UIVisualEffectView(effect: darkBlur)
+//
+//        blurView.frame = circle.bounds
+//
+//        circle.addSubview(blurView)
+//        self.loadingContainer?.addSubview(circle)
+//        circle.layer.add(baseViewPulse, forKey: nil)
+//
+//
+//    }
+    
     
     // MARK: - Start Animation
     
@@ -100,6 +146,8 @@ public class Loadmation {
             switch loadStyle {
             case Styles.Circular.rawValue:
                 self.startCircularAnimation()
+//            case "pulse":
+//                self.startPulseAnimation()
             default:
                 print("No Style Selected")
             }
@@ -109,7 +157,7 @@ public class Loadmation {
     
     
     // MARK: - Start loading animation
-    func rotateAnimation(view:UIView,duration: CFTimeInterval = 1.0) {
+    func rotateAnimation(view:UIView,duration: CFTimeInterval = 1.5) {
         
         let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotateAnimation.fromValue = 0.0
@@ -123,7 +171,7 @@ public class Loadmation {
     
     // MARK: - Stop loading animation
     
-   open func stopLoadingAnimation()  {
+    open func stopLoadingAnimation()  {
         self.loadingContainer?.layer.removeAnimation(forKey: "transform.rotation")
         self.loadmationImgView?.removeFromSuperview()
         self.loadingContainer?.isHidden = true
