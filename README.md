@@ -1,7 +1,7 @@
 # Loadmation
 > Awesome loading animation.
 
-[![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/NSStringMask/badge.svg)](https://cocoadocs.org/docsets/NSStringMask)
+
 
 A custom loading animation for Swift.
 
