@@ -40,20 +40,24 @@ class LoadmationImageView: UIImageView {
 
 public class Loadmation {
     
-    // Styles Enum
+    // Style Enum
     /*
      * Each Style corresponds to a image.
      *
      */
-    public enum Styles: String {
-        case Circular  = "circular"
-        case Circular2 = "circular2"
-        case Arrow     = "arrow"
-//        case Pulse     = "pulse"
+    public enum Style: String {
+        case circular
+        case circular2
+        case arrow
+//        case pulse
+        
+        var imageFromStyle: String {
+            return self.rawValue.appending(".png")
+        }
     }
     
     private var loadingState        : Bool!    // Loading State of view
-    private var loadingStyle        : String?  // Loaading Style
+    private var loadingStyle        : Style?  // Loaading Style
     private var loadingContainer    : UIView?  // Parent View
     private var containerFrame      : CGRect?  // Frame
     fileprivate var loadingImgView  : UIImageView! // Serves as loading image view
@@ -70,7 +74,7 @@ public class Loadmation {
     // MARK: - Circular Animation
     func startCircularAnimation() {
         
-        let imageName = self.loadingStyle!.appending(".png")
+        let imageName = self.loadingStyle!.imageFromStyle
         
         
         let frameworkBundle = Bundle(for: Loadmation.self)
