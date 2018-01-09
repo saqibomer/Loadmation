@@ -59,9 +59,9 @@ self.loadmation.stopLoadingAnimation()
 ## Supported loading animation styles
 
 * Circular
-    * ```Loadmation.Styles.Circular.rawValue```
-    * ```Loadmation.Styles.Circular2.rawValue```
-    * ```Loadmation.Styles.Arrow.rawValue```
+    * ```Loadmation.Style.circular```
+    * ```Loadmation.Style.circular2```
+    * ```Loadmation.Style.arrow```
 
 
 ## Meta

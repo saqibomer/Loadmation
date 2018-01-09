@@ -61,14 +61,14 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
         
         
         if indexPath.row == 0 {
-            self.cicular = Loadmation(parent: cell.contentView, style: Loadmation.Styles.Circular.rawValue, frame: cell.contentView.frame)
+            self.cicular = Loadmation(parent: cell.contentView, style: Loadmation.Style.circular, frame: cell.contentView.frame)
             
         } else if indexPath.row == 1 {
-            self.cicular2 = Loadmation(parent: cell.contentView, style: Loadmation.Styles.Circular2.rawValue, frame: cell.contentView.frame)
+            self.cicular2 = Loadmation(parent: cell.contentView, style: Loadmation.Style.circular2, frame: cell.contentView.frame)
             
             
         } else if indexPath.row == 2 {
-            self.arrow = Loadmation(parent: cell.contentView, style: Loadmation.Styles.Arrow.rawValue, frame: cell.contentView.frame)
+            self.arrow = Loadmation(parent: cell.contentView, style: Loadmation.Style.arrow, frame: cell.contentView.frame)
             
         }
         

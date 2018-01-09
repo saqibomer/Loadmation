@@ -62,13 +62,12 @@ public class Loadmation {
     private var containerFrame      : CGRect?  // Frame
     fileprivate var loadingImgView  : UIImageView! // Serves as loading image view
     var loadmationImgView : LoadmationImageView?
-    @discardableResult public init(parent: UIView, style: String, frame: CGRect) {
+    @discardableResult public init(parent: UIView, style: Loadmation.Style, frame: CGRect) {
         
         self.loadingStyle       = style
         self.loadingState       = false
         self.loadingContainer   = parent
         self.containerFrame     = frame
-        //        self.startAnimation()
     }
     
     // MARK: - Circular Animation
@@ -83,12 +82,14 @@ public class Loadmation {
         let image = UIImage(named: imageName, in: resourceBundle, compatibleWith: nil)
         
         loadmationImgView = LoadmationImageView(frame: (self.loadingContainer?.frame)!, image: image!)
-        self.loadingContainer?.layoutIfNeeded()
+        
         loadmationImgView?.contentMode             = .scaleAspectFit
+        self.loadingContainer?.layoutIfNeeded()
+        
         self.loadingContainer?.addSubview(loadmationImgView!)
-        self.loadingContainer?.bounds              = self.containerFrame!
         self.loadingContainer?.layer.cornerRadius  = (self.loadingContainer?.layer.frame.width)! / 2
         self.loadingContainer?.clipsToBounds       = true
+        self.loadingContainer?.layoutIfNeeded()
         self.rotateAnimation(view: self.loadmationImgView!)
         self.loadingState = true
         
@@ -145,16 +146,12 @@ public class Loadmation {
         
         self.loadingContainer?.isHidden = false
         if !self.loadingState {
-            let loadStyle = Styles.Circular.rawValue
+            print("No Style Selected. Using default circular animation")
+            self.startCircularAnimation()
+
             
-            switch loadStyle {
-            case Styles.Circular.rawValue:
-                self.startCircularAnimation()
-//            case "pulse":
-//                self.startPulseAnimation()
-            default:
-                print("No Style Selected")
-            }
+        } else {
+            // TO-Do Add More Styles
             
         }
     }
@@ -183,4 +180,5 @@ public class Loadmation {
     }
     
 }
+
 
