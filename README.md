@@ -37,7 +37,7 @@ Create an object of Loadmation
 In your ```viewDidLoad()``` or any other method initialize object as: 
 
 ```sh
-self.loadmation = Loadmation(parent: self.containerView, style: Loadmation.Style.circular, frame: cell.contentView.frame)
+self.loadmation = Loadmation(parent: self.containerView, style: Loadmation.Style.circular, frame: self.containerView.frame)
 ```
 
 > TIP: You can add container view any background color in storyboard.
