@@ -95,6 +95,36 @@ public class Loadmation {
         
     }
     
+    // MARK: - Sinewave Animation
+    
+    func startSineWaveAnimation()  {
+        let frame = self.loadingContainer?.frame
+        let centerY = frame!.height / 2  // find the vertical center
+        let steps = 200                 // Divide the curve into steps
+        let stepX = frame!.width / CGFloat(steps) // find the horizontal step distance
+        // Make a path
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 0, y: centerY))
+        // Loop and draw steps in straingt line segments
+        for i in 0...steps {
+            let x = CGFloat(i) * stepX
+            let y = (sin(Double(i) * 0.1) * 40) + Double(centerY)
+            path.addLine(to: CGPoint(x: x, y: CGFloat(y)))
+        }
+        
+        self.loadingContainer?.path = path.CGPath
+        self.loadingContainer?.layer.lineWidth = 3
+        self.loadingContainer?.layer.fillColor = UIColor.clearColor().CGColor
+        self.loadingContainer?.layer.strokeColor = UIColor.redColor().CGColor
+        self.loadingContainer?.layer.strokeStart = 0
+        self.loadingContainer?.layer.strokeEnd = 0 // <<
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.duration = 3
+        self.loadingContainer?.layer.addAnimation(animation, forKey: "strokeEnd")
+    }
+    
     // MARK: - Pulse Animation
     
 //    func startPulseAnimation() {
